@@ -2,6 +2,10 @@
 
 Wow it looks like Spring, pretty cool :smiley:
 
+### Course
+
+- [NestJS Zero to Hero](https://www.udemy.com/course/nestjs-zero-to-hero/)
+
 ### Techs
 
 - [nestjs](https://github.com/nestjs/nest)
