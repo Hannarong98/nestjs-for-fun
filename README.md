@@ -1,6 +1,6 @@
 ## Learning NestJS in free time
 
-Wow it looks like Spring, pretty cool :)
+Wow it looks like Spring, pretty cool :smiley:
 
 ### Techs
 
