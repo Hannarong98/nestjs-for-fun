@@ -24,6 +24,9 @@ Wow it looks like Spring, pretty cool :smiley:
   - `TOKEN_EXPIRES_IN=<TOKEN_EXPIRATION_TIME_IN_SECONDS>`
  - Run `yarn start`
 
+### Available Endpoints
+- GET `/tasks`
+
 ### Techs
 
 - [nestjs](https://github.com/nestjs/nest)
