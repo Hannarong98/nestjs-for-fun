@@ -7,7 +7,7 @@ Wow it looks like Spring, pretty cool :smiley:
 - [NestJS Zero to Hero](https://www.udemy.com/course/nestjs-zero-to-hero/)
 
 ### Requirements
-* Docker with postgres running
+* Docker with postgres running in container
 * [Optional] pgAdmin for dev purposes
 * Postman or any api testing tools
 
