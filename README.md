@@ -15,7 +15,7 @@ Wow it looks like Spring, pretty cool :smiley:
 * Postman or any api testing tools
 
 ### Setup
-- Run `docker run --name <ANY_NAME> -p 5432:5423 -e POSTGRES_PASSWORD=postgres -d postgres`
+- Run `docker run --name <ANY_NAME> -p 5432:5423 -e POSTGRES_PASSWORD=<ANY_PASSWORD> -d postgres`
 - Run `yarn install`
 - Create .env file in root folder and configure enviroment variables
   - `PORT=<APPLICATION_PORT>`
