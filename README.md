@@ -16,3 +16,7 @@ Wow it looks like Spring, pretty cool :smiley:
 - [postgres](https://www.postgresql.org/)
 - [pgadmin](https://www.pgadmin.org/)
 - [typeorm](https://github.com/typeorm/typeorm)
+- [passport](https://github.com/jaredhanson/passport)
+- [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
+- [passport-jwt](https://github.com/mikenicholson/passport-jwt)
+
