@@ -6,6 +6,9 @@ Wow it looks like Spring, pretty cool :smiley:
 
 - [NestJS Zero to Hero](https://www.udemy.com/course/nestjs-zero-to-hero/)
 
+### Topic
+- Task management
+
 ### Requirements
 * Docker with postgres running in container
 * [Optional] pgAdmin for dev purposes
@@ -25,7 +28,26 @@ Wow it looks like Spring, pretty cool :smiley:
  - Run `yarn start`
 
 ### Available Endpoints
-- GET `/tasks`
+##### Task
+- `Requires Authorization: Bearer`
+- `GET /tasks`
+  - returns all tasks owned by user
+- `GET /tasks/:id`
+  - returns a task owned by user
+- `POST /tasks/`
+  - `{"title": "..." , "description": "..."}`
+  - creates a task
+- `PATCH /tasks/:id`
+  - `{"status": "OPEN" | "IN_PROGRESS" | "DONE" }`
+  - updates task status
+- `DELETE /tasks/:id`
+  - deletes a task
+
+##### Auth
+- `POST /auth/signUp`
+  - `{"username": "..." , "password": "..."}`
+- `POST /auth/signIn`
+  - `{"username": "..." , "password": "..."}`
 
 ### Techs
 
