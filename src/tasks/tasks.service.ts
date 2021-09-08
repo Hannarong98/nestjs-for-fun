@@ -5,6 +5,7 @@ import { FilteredTaskDTO } from './dto/filtered.task.dto';
 import { Task } from './entities/task.entity';
 import { TaskRepository } from './repositories/tasks.repository';
 import { InjectRepository } from '@nestjs/typeorm';
+import { User } from 'src/auth/entities/user.entity';
 
 @Injectable()
 export class TasksService {
@@ -13,8 +14,10 @@ export class TasksService {
     private taskRepository: TaskRepository,
   ) {}
 
-  public getTaskById = async (id: string): Promise<Task> => {
-    const foundTask = await this.taskRepository.findOne(id);
+  public getTaskById = async (id: string, user: User): Promise<Task> => {
+    const foundTask = await this.taskRepository.findOne({
+      where: { id, user },
+    });
 
     if (!foundTask) {
       throw new NotFoundException(`Could not find task with id: ${id}`);
@@ -25,16 +28,17 @@ export class TasksService {
 
   public getTasks = async (
     filteredTaskDTO: FilteredTaskDTO,
+    user: User,
   ): Promise<Task[]> => {
-    return this.taskRepository.getTasks(filteredTaskDTO);
+    return this.taskRepository.getTasks(filteredTaskDTO, user);
   };
 
-  public createTask = (taskDto: TaskDTO): Promise<Task> => {
-    return this.taskRepository.createTask(taskDto);
+  public createTask = (taskDto: TaskDTO, user: User): Promise<Task> => {
+    return this.taskRepository.createTask(taskDto, user);
   };
 
-  public deleteTaskById = async (id: string): Promise<void> => {
-    const result = await this.taskRepository.delete(id);
+  public deleteTaskById = async (id: string, user: User): Promise<void> => {
+    const result = await this.taskRepository.delete({ id, user });
 
     if (result.affected === 0) {
       throw new NotFoundException(`Could not find task with id: ${id}`);
@@ -44,8 +48,9 @@ export class TasksService {
   public updateTaskStatus = async (
     id: string,
     updatedStatus: TaskStatus,
+    user: User,
   ): Promise<Task> => {
-    const task = await this.getTaskById(id);
+    const task = await this.getTaskById(id, user);
 
     task.status = updatedStatus;
 

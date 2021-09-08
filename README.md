@@ -19,4 +19,7 @@ Wow it looks like Spring, pretty cool :smiley:
 - [passport](https://github.com/jaredhanson/passport)
 - [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 - [passport-jwt](https://github.com/mikenicholson/passport-jwt)
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1c45361068b468d414d778ac60e6e9ee06125476
