@@ -9,6 +9,7 @@ Wow it looks like Spring, pretty cool :smiley:
 ### Requirements
 * Docker with postgres running
 * [Optional] pgAdmin for dev purposes
+* Postman or any api testing tools
 
 ### Setup
 - Run `docker run --name <ANY_NAME> -p 5432:5423 -e POSTGRES_PASSWORD=postgres -d postgres`
