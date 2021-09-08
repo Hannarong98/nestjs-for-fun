@@ -6,6 +6,23 @@ Wow it looks like Spring, pretty cool :smiley:
 
 - [NestJS Zero to Hero](https://www.udemy.com/course/nestjs-zero-to-hero/)
 
+### Requirements
+* Docker with postgres running
+* [Optional] pgAdmin for dev purposes
+
+### Setup
+- Run `docker run --name <ANY_NAME> -p 5432:5423 -e POSTGRES_PASSWORD=postgres -d postgres`
+- Run `yarn install`
+- Create .env file in root folder and configure enviroment variables
+  - `PORT=<APPLICATION_PORT>`
+  - `PG_USERNAME=<POSTGRESS_USERNAME>`
+  - `PG_PASSWORD=<POSTGRESS_PASSWORD>`
+  - `PG_DATABASE_NAME=<DATABASE_NAME>`
+  - `PG_PORT=<POSTGRESS_PORT>`
+  - `JWT_SECRET=<JWT_SECRET/STRING_VALUES>`
+  - `TOKEN_EXPIRES_IN=<TOKEN_EXPIRATION_TIME_IN_SECONDS>`
+ - Run `yarn start`
+
 ### Techs
 
 - [nestjs](https://github.com/nestjs/nest)
