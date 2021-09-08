@@ -19,10 +19,10 @@ Wow it looks like Spring, pretty cool :smiley:
 - Run `yarn install`
 - Create .env file in root folder and configure enviroment variables
   - `PORT=<APPLICATION_PORT>`
-  - `PG_USERNAME=<POSTGRESS_USERNAME>`
-  - `PG_PASSWORD=<POSTGRESS_PASSWORD>`
+  - `PG_USERNAME=<POSTGRES_USERNAME>`
+  - `PG_PASSWORD=<POSTGRES_PASSWORD>`
   - `PG_DATABASE_NAME=<DATABASE_NAME>`
-  - `PG_PORT=<POSTGRESS_PORT>`
+  - `PG_PORT=<POSTGRES_PORT>`
   - `JWT_SECRET=<JWT_SECRET/STRING_VALUES>`
   - `TOKEN_EXPIRES_IN=<TOKEN_EXPIRATION_TIME_IN_SECONDS>`
  - Run `yarn start`
