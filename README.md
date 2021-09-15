@@ -22,6 +22,7 @@ Wow it looks like Spring, pretty cool :smiley:
 - Run `yarn install`
 - Create .env file in root folder and configure environment variables
   - `PORT=<APPLICATION_PORT>`
+  - `ENVIRONMENT=<YOUR_ENVIRONMENT>`
   - `PG_USERNAME=<POSTGRES_USERNAME>`
   - `PG_PASSWORD=<POSTGRES_PASSWORD>`
   - `PG_DATABASE_NAME=<DATABASE_NAME>`
