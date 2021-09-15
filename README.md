@@ -7,14 +7,17 @@ Wow it looks like Spring, pretty cool :smiley:
 - [NestJS Zero to Hero](https://www.udemy.com/course/nestjs-zero-to-hero/)
 
 ### Topic
+
 - Task management
 
 ### Requirements
-* Docker with postgres running in container
-* [Optional] pgAdmin for dev purposes
-* Postman or any api testing tools
+
+- Docker with postgres running in container
+- [Optional] pgAdmin for dev purposes
+- Postman or any api testing tools
 
 ### Setup
+
 - Run `docker run --name <ANY_NAME> -p 5432:5423 -e POSTGRES_PASSWORD=<ANY_PASSWORD> -d postgres`
 - Run `yarn install`
 - Create .env file in root folder and configure enviroment variables
@@ -25,29 +28,11 @@ Wow it looks like Spring, pretty cool :smiley:
   - `PG_PORT=<POSTGRES_PORT>`
   - `JWT_SECRET=<JWT_SECRET/STRING_VALUES>`
   - `TOKEN_EXPIRES_IN=<TOKEN_EXPIRATION_TIME_IN_SECONDS>`
- - Run `yarn start`
+- Run `yarn start`
 
-### Available Endpoints
-##### Task
-- `Requires Authorization: Bearer`
-- `GET /tasks`
-  - returns all tasks owned by user
-- `GET /tasks/:id`
-  - returns a task owned by user
-- `POST /tasks/`
-  - `{"title": "..." , "description": "..."}`
-  - creates a task
-- `PATCH /tasks/:id`
-  - `{"status": "OPEN" | "IN_PROGRESS" | "DONE" }`
-  - updates task status
-- `DELETE /tasks/:id`
-  - deletes a task
+### Swagger endpoint
 
-##### Auth
-- `POST /auth/signUp`
-  - `{"username": "..." , "password": "..."}`
-- `POST /auth/signIn`
-  - `{"username": "..." , "password": "..."}`
+- http://localhost:<PORT>/api/v1/documentations
 
 ### Techs
 

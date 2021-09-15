@@ -1,7 +1,4 @@
-import {
-  ConflictException,
-  InternalServerErrorException,
-} from '@nestjs/common';
+import { ConflictException, InternalServerErrorException } from '@nestjs/common';
 import { EntityRepository, Repository } from 'typeorm';
 import { AuthCredentialsDto } from '../dto/auth-credentials.dto';
 import { User } from '../entities/user.entity';
@@ -9,9 +6,7 @@ import * as bcrypt from 'bcrypt';
 
 @EntityRepository(User)
 export class UsersRepository extends Repository<User> {
-  public createUser = async (
-    authCredentialsDto: AuthCredentialsDto,
-  ): Promise<void> => {
+  public createUser = async (authCredentialsDto: AuthCredentialsDto): Promise<void> => {
     const { username, password } = authCredentialsDto;
 
     const salt = await bcrypt.genSalt();

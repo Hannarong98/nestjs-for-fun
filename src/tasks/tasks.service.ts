@@ -26,10 +26,7 @@ export class TasksService {
     return foundTask;
   };
 
-  public getTasks = async (
-    filteredTaskDTO: FilteredTaskDTO,
-    user: User,
-  ): Promise<Task[]> => {
+  public getTasks = async (filteredTaskDTO: FilteredTaskDTO, user: User): Promise<Task[]> => {
     return this.taskRepository.getTasks(filteredTaskDTO, user);
   };
 

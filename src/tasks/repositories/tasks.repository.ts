@@ -29,10 +29,7 @@ export class TaskRepository extends Repository<Task> {
     }
   };
 
-  public getTasks = async (
-    filteredTaskDTO: FilteredTaskDTO,
-    user: User,
-  ): Promise<Task[]> => {
+  public getTasks = async (filteredTaskDTO: FilteredTaskDTO, user: User): Promise<Task[]> => {
     const { status, search } = filteredTaskDTO;
 
     const query = this.createQueryBuilder('task');

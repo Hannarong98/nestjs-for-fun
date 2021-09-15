@@ -6,20 +6,13 @@ import { JwtService } from '@nestjs/jwt';
 import { JwtPayload } from './interfaces/jwt.payload.interface';
 @Injectable()
 export class AuthService {
-  constructor(
-    private usersRepository: UsersRepository,
-    private jwtService: JwtService,
-  ) {}
+  constructor(private usersRepository: UsersRepository, private jwtService: JwtService) {}
 
-  public signUp = async (
-    authCrendentialsDto: AuthCredentialsDto,
-  ): Promise<void> => {
+  public signUp = async (authCrendentialsDto: AuthCredentialsDto): Promise<void> => {
     return this.usersRepository.createUser(authCrendentialsDto);
   };
 
-  public signIn = async (
-    authCredentials: AuthCredentialsDto,
-  ): Promise<{ accessToken: string }> => {
+  public signIn = async (authCredentials: AuthCredentialsDto): Promise<{ accessToken: string }> => {
     const { username, password } = authCredentials;
     const user = await this.usersRepository.findOne({ username });
 
