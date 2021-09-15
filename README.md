@@ -32,7 +32,7 @@ Wow it looks like Spring, pretty cool :smiley:
 
 ### Swagger endpoint
 
-- http://localhost:<PORT>/api/v1/documentations
+- `<baseurl>/api/v1/documentations`
 
 ### Techs
 
