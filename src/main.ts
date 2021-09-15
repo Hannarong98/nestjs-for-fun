@@ -15,10 +15,9 @@ async function bootstrap() {
   app.setGlobalPrefix('api/v1');
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('Tasks Management')
+    .setTitle('Tasks Management API')
     .setDescription('Easily manage your task by using this api')
     .setVersion('1.0')
-    .addTag('Tasks Management')
     .addBearerAuth({ type: 'http', scheme: 'bearer', bearerFormat: 'JWT' }, 'Access token')
     .build();
 
