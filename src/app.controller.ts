@@ -3,14 +3,13 @@ import { ApiExcludeController } from '@nestjs/swagger';
 
 const { ENVIRONMENT, HOSTNAME, PORT } = process.env;
 
-const protocol = ENVIRONMENT.toLocaleLowerCase() === 'development' ? 'http' : 'https';
+const isDev = ENVIRONMENT.toLocaleLowerCase() === 'dev' || 'development' ? true : false;
 
-const hostname = ENVIRONMENT.toLocaleLowerCase() === 'development' ? 'localhost' : HOSTNAME;
+const protocol = isDev ? 'http' : 'https';
 
-const baseUrl =
-  ENVIRONMENT.toLocaleLowerCase() === 'development'
-    ? `${protocol}://${hostname}:${PORT}`
-    : `${protocol}://${hostname}`;
+const hostname = isDev ? 'localhost' : HOSTNAME;
+
+const baseUrl = isDev ? `${protocol}://${hostname}:${PORT}` : `${protocol}://${hostname}`;
 
 @ApiExcludeController(true)
 @Controller('/')
