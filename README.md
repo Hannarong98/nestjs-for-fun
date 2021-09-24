@@ -20,7 +20,7 @@ Wow it looks like Spring, pretty cool :smiley:
 
 - Run `docker run --name <ANY_NAME> -p 5432:5423 -e POSTGRES_PASSWORD=<ANY_PASSWORD> -d postgres`
 - Run `yarn install`
-- Create .env file in root folder and configure environment variables
+- Create `.env` file in root folder and configure environment variables
   - `PORT=<APPLICATION_PORT>`
   - `ENVIRONMENT=<YOUR_ENVIRONMENT>`
   - `PG_USERNAME=<POSTGRES_USERNAME>`
