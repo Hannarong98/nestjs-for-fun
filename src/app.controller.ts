@@ -3,7 +3,7 @@ import { ApiExcludeController } from '@nestjs/swagger';
 
 const { ENVIRONMENT, HOSTNAME, PORT } = process.env;
 
-const isDev = ENVIRONMENT.toLocaleLowerCase() === 'dev' || 'development' ? true : false;
+const isDev = ENVIRONMENT.toLocaleLowerCase() === 'dev' || 'development';
 
 const protocol = isDev ? 'http' : 'https';
 
